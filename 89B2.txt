@@ -1,0 +1,6 @@
+Schedule No : 9	Date : 2020-09-09
+From : 06:00:00	To : 10:00:00
+User Id : 8	User Type: CUSTOMER
+First Name : FX Fname Updated	Last Name : FX Lname updated
+Phone No: 00
+Seat No : B2	Price : 600.0

@@ -1,0 +1,147 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import de.jensd.fx.glyphs.fontawesome.FontAwesomeIconView?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Menu?>
+<?import javafx.scene.control.MenuBar?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.RadioMenuItem?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="rootPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="Controller.HomeController">
+   <children>
+      <BorderPane fx:id="mainPane" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <center>
+            <AnchorPane prefHeight="378.0" prefWidth="600.0" style="-fx-background-color: white;">
+               <children>
+                  <ImageView fx:id="myImageView" fitHeight="375.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="50.0" />
+                  <Label alignment="CENTER" prefHeight="50.0" prefWidth="600.0" text="ONLINE BUS TICKET BOOKING MANAGEMENT SYSTEM" textFill="#0001ff" AnchorPane.bottomAnchor="380.0" AnchorPane.leftAnchor="0.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+                     <font>
+                        <Font name="System Bold" size="15.0" />
+                     </font>
+                  </Label>
+               </children>
+            </AnchorPane>
+         </center>
+         <top>
+            <HBox>
+               <children>
+                  <FontAwesomeIconView fx:id="homeIcon" fill="#4228d6" glyphName="HOME" onMouseClicked="#mouseIconClicked" size="25" wrappingWidth="12.0">
+                     <HBox.margin>
+                        <Insets />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <MenuBar prefHeight="25.0" prefWidth="397.0" HBox.hgrow="ALWAYS">
+                    <menus>
+                      <Menu fx:id="manageMenu" mnemonicParsing="false" text="Manage">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#handleManageUserAction" text="Manage User">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USER" size="15" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#handleManageBusAction" text="Manage Bus">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="BUS" size="15" />
+                                 </graphic>
+                              </MenuItem>
+                              <MenuItem mnemonicParsing="false" onAction="#handleManageRouteAction" text="Manage Route">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="ROAD" size="15" />
+                                 </graphic>
+                              </MenuItem>
+                              <RadioMenuItem mnemonicParsing="false" onAction="#handleManageDriverAction" text="Manage Driver" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleManageCustomerAction" text="Manage Customer" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleManageBusSeatsAction" text="Manage Bus Seats" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleManageScheduleAction" text="Manage Schedule" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Booking">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#handleShowScheduleAction" text="Show Schedule" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleBookTicketAction" text="Book Ticket" />
+                              <MenuItem mnemonicParsing="false" onAction="#handleSearchScheduleAction" text="Search Schedule" />
+                        </items>
+                      </Menu>
+                      <Menu mnemonicParsing="false" text="Profile">
+                        <items>
+                          <MenuItem mnemonicParsing="false" onAction="#manageProfileAction" text="Manage Profile">
+                                 <graphic>
+                                    <FontAwesomeIconView glyphName="USER" size="15" />
+                                 </graphic>
+                              </MenuItem>
+                        </items>
+                      </Menu>
+                        <Menu mnemonicParsing="false" text="Setting">
+                          <items>
+                            <MenuItem mnemonicParsing="false" onAction="#menuAboutAction" text="About" />
+                          </items>
+                        </Menu>
+                    </menus>
+                     <HBox.margin>
+                        <Insets left="15.0" />
+                     </HBox.margin>
+                  </MenuBar>
+                  <FontAwesomeIconView fx:id="maximizeIcon" fill="#4228d6" glyphName="SQUARE_ALT" onMouseClicked="#mouseIconClicked" size="25">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="minimizeIcon" fill="#4228d6" glyphName="MINUS" onMouseClicked="#mouseIconClicked" size="25">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="signOutIcon" fill="#4228d6" glyphName="SIGN_OUT" onMouseClicked="#mouseIconClicked" size="25">
+                     <HBox.margin>
+                        <Insets left="5.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView fx:id="closeIcon" fill="RED" glyphName="CLOSE" onMouseClicked="#mouseIconClicked" size="25" />
+               </children>
+            </HBox>
+         </top>
+         <bottom>
+            <HBox maxHeight="30.0" maxWidth="200.0" minHeight="21.0" minWidth="200.0" prefHeight="27.0" prefWidth="200.0" BorderPane.alignment="CENTER">
+               <children>
+                  <Label text="Label" />
+                  <FontAwesomeIconView glyphName="FACEBOOK_SQUARE" size="20" stroke="#e4dede" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView glyphName="INSTAGRAM" size="20" stroke="#e4dede" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView glyphName="LINKEDIN_SQUARE" size="20" stroke="#e4dede" textAlignment="CENTER">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+                  <FontAwesomeIconView glyphName="GOOGLE_PLUS_SQUARE" size="20">
+                     <HBox.margin>
+                        <Insets right="10.0" />
+                     </HBox.margin>
+                  </FontAwesomeIconView>
+               </children>
+               <BorderPane.margin>
+                  <Insets />
+               </BorderPane.margin>
+               <padding>
+                  <Insets bottom="5.0" left="60.0" right="60.0" top="5.0" />
+               </padding>
+            </HBox>
+         </bottom>
+      </BorderPane>
+   </children>
+   <padding>
+      <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+   </padding>
+</AnchorPane>
